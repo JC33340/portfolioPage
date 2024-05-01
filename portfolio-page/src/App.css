@@ -1,7 +1,7 @@
 .body{
   margin:-8px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #4c5c70;
+  color: #D3D3D3;
 }
 
 .centered-flex-item{
@@ -25,7 +25,6 @@
   left:0;
   backdrop-filter: blur(5px);
   animation: entranceDown 1s;
-  color: white;
 }
 
 
@@ -45,7 +44,6 @@
   display: flex;
   justify-content: space-evenly;
   background-color: #4c5c70;
-  color: white;
   height: 100vh;
 }
 
@@ -81,7 +79,6 @@
   flex-direction: column;
   padding:20px;
   background-color: #61758E;
-  color:white;
 }
 
 .education-item-container{
@@ -125,8 +122,12 @@
   align-items: center;
   padding:10px;
   background-color: #4c5c70;
-  color: white;
 }
+
+.project-item-h2{
+  margin-bottom: 3px;
+}
+
 
 .project-item-container{
   display: flex;
@@ -135,16 +136,37 @@
   row-gap: 40px;
 }
 
-
-.project-image{
-  height: 300px;
+.project-image-slider{
+  width: 600px;
+  overflow: hidden;
   border-radius: 10px;
 }
 
-@media only screen and (max-width:700px) {
-  .project-image{
-    height: 200px;
-  }
+.project-image-slides{
+  width: 600px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.project-image-slides::-webkit-scrollbar{
+  background-color:#4c5c70;
+  width:120px;
+}
+
+
+
+.project-image-slides::-webkit-scrollbar-thumb{
+  background-color: black;
+  border-radius: 10px;
+}
+
+.project-image{
+  width:600px;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  margin-right: 20px;
 }
 
 .project-item-name-tech{
@@ -153,17 +175,74 @@
   align-items: center;
 }
 
+.project-item-tech-container{
+  display: flex;
+  column-gap: 5px;
+}
 
-.project-item-tech-container>svg{
-  height: 40px;
-  margin-left: 5px;
+.project-item-tech-logo{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-item-tech-logo>svg{
+  height: 35px;
+  opacity: 0.5;
+  position: relative;
+}
+
+.project-item-tech-logo>svg:hover{
+  opacity: 1;
+}
+
+.project-item-tech-logo .logo-text{
+  visibility: hidden;
+  background-color: #61758E;
+  padding: 5px;
+  border-radius: 2px;
+  position: absolute;
+  font-size: 10px;
+  top:40px;
+}
+
+.project-item-tech-logo:hover .logo-text{
+  visibility: visible;
+}
+
+.anchor-container{
+  display: flex;
+  margin-top: 5px;
 }
 
 .project-item-a, .project-item-a:visited{
   text-decoration: none;
-  color: white;
+  color: #D3D3D3;
+  margin-right: 5px;
 }
 
+.project-item-a:hover{
+  color:white;
+}
+
+.anchor-div>svg{
+  height: 13px;
+  fill: #D3D3D3;
+}
+
+@media only screen and (max-width:700px) {
+  .project-image{
+    width: 350px;
+  }
+  .project-item{
+    width: 350px;
+    font-size: 12px;
+  }
+  .project-item-tech-logo>svg{
+    height: 25px;
+  }
+}
 
 
 @keyframes entranceLeft{

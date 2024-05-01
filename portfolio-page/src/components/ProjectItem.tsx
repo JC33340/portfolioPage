@@ -29,16 +29,33 @@ export default function ProjectItem({data}:props){
     })
     return(
         <div className="project-item">
-            <img className="project-image" src={data.pictures[0]} />
+            {data.pictures.length === 1?
+            <img src={data.pictures[0]} className="project-image" /> :
+
+            <div className="project-image-slider">
+                <div className="project-image-slides">
+                    {data.pictures.map(pic=>{
+                        return(<img className="project-image" src={pic}/>)
+                    })}
+                </div>
+            </div>
+            }
+            
+            
             <div className="project-item-name-tech">
-                <h2>{data.name}</h2>
+                <div>
+                    <h2 className="project-item-h2">{data.name}</h2>
+                    <div>{data.description}</div>
+                </div>
                 <div className="project-item-tech-container">
                     {techDisplay}
                 </div>
             </div>
-            <div>{data.description}</div>
-            {data.youtubeLink && <a className="project-item-a" href={data.youtubeLink}>View Demo</a>}
-            <a className="project-item-a" href={data.githubLink}>View Code</a>
+            <div className="anchor-container">
+                {data.youtubeLink && <div className="anchor-div"><LogoYoutube /> <a target = "_blank" className="project-item-a" href={data.youtubeLink}>Demo</a></div> }
+                <div className="anchor-div"><LogoGithub /><a target="_blank" className="project-item-a" href={data.githubLink}>Code</a></div>
+            </div>
+            
         </div>
     )
 }

@@ -19,7 +19,7 @@ export default function EducationItem({school,location,duration,skillsLearned}:p
     const options = {
         root: null,
         rootMargin:"0px",
-        threshold: 0.9
+        threshold: 1
     }
 
     React.useEffect(()=>{
