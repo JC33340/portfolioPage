@@ -95,6 +95,7 @@ html{
   animation:entranceLeft 2s;
   animation-delay: 0.2s;
   animation-fill-mode: backwards;
+  position: relative;
 }
 
 .about-svg svg{
@@ -107,26 +108,24 @@ html{
   opacity: 1;
 }
 
-.about-svg-gmail{
-  position: relative;
+.about-svg-item{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.about-svg-gmail div{
+.about-svg-item div{
   position: absolute;
   visibility: hidden;
   top:27px;
-  text-align: center;
-  width:112px;
+  /*width:112px;*/
   background-color: #61758E;
   font-size: 14px;
   padding:5px;
   border-radius: 15px;
 }
 
-.about-svg-gmail:hover div{
+.about-svg-item:hover div{
   visibility: visible;
 }
 

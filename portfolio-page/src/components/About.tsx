@@ -16,7 +16,7 @@ export default function About(){
     }
 
     return(
-        <div className="about" id ="About">
+        <div className="about" id ="about">
             <div className="about-item">
                 <div className="centered-flex-item name">Hi, I'm Jason</div>
                 <div className="centered-flex-item about-text">
@@ -32,7 +32,7 @@ export default function About(){
                     <a href="https://www.github.com/JC33340" target="_blank">
                         <LogoGithub />
                     </a>
-                    <div className="about-svg-gmail">
+                    <div className="about-svg-item">
                         <LogoGmail onclick = {onClick} onmouseover={onmouseover} />
                         <div>{clipboardText}</div>
                     </div>
