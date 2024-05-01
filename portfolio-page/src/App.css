@@ -1,6 +1,7 @@
 .body{
   margin:-8px;
   font-family: Arial, Helvetica, sans-serif;
+  color: #4c5c70;
 }
 
 .centered-flex-item{
@@ -18,30 +19,40 @@
   justify-content: flex-end;
   gap: 30px;
   padding:20px;
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  backdrop-filter: blur(5px);
+  animation: entranceDown 1s;
+  color: white;
 }
 
+
 .header-item{
-  font-size: 2vw;
+  font-size: 30px;
   font-weight: 600;
-  color: #4c5c70;
-  animation:entranceDown 1s;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-item{
+    font-size:20px;
+  }
 }
 
 .about{
-  margin:10px 5px;
-  border-radius: 5px;
+  padding:0px 30px;
   display: flex;
   justify-content: space-evenly;
-  padding: 20px;
-  color: #4c5c70;
-  border: 1px solid black;
-  height: 1000px;
+  background-color: #4c5c70;
+  color: white;
+  height: 100vh;
 }
 
 .about-photo{
   height: 25vw;
   width: auto;
-  animation: entranceRight 1s;
+  animation: entranceRight 2s;
 }
 
 .about-item{
@@ -56,30 +67,40 @@
   font-weight: 800;
   margin-bottom: 20px;
   animation-name:entranceLeft;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 
 .about-text{
   text-align: justify;
-  animation: entranceLeft 1s;
+  animation: entranceLeft 2s;
 }
 
 .education-section{
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding:20px;
+  background-color: #61758E;
+  color:white;
 }
 
 .education-item-container{
   display: flex;
-  gap:30px;
+  flex-wrap:wrap;
+  gap:50px;
+}
+
+@media only screen and (max-width:700px){
+  .education-item-container{
+    font-size: 15px;
+  }
 }
 
 .education-item{
-  border: 5px solid #4c5c70;
+  border: 5px solid white;
   border-radius: 10px;
   padding:15px;
-  animation: entranceDown 1s;
+  animation: entranceDown 2s;
 }
 
 .education-item-top>h3,p{
@@ -97,6 +118,53 @@
 .skills-learned-list{
   margin:5px -20px;
 }
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:10px;
+  background-color: #4c5c70;
+  color: white;
+}
+
+.project-item-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 40px;
+}
+
+
+.project-image{
+  height: 300px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width:700px) {
+  .project-image{
+    height: 200px;
+  }
+}
+
+.project-item-name-tech{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.project-item-tech-container>svg{
+  height: 40px;
+  margin-left: 5px;
+}
+
+.project-item-a, .project-item-a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+
 
 @keyframes entranceLeft{
   from{
