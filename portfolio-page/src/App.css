@@ -71,6 +71,51 @@
 .about-text{
   text-align: justify;
   animation: entranceLeft 2s;
+  animation-delay: 0.1s;
+  animation-fill-mode: backwards;
+}
+
+.about-svg{
+  display:flex;
+  column-gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+  animation:entranceLeft 2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.about-svg svg{
+  height:25px;
+  opacity: 0.5;
+  fill:#4c5c70;
+}
+
+.about-svg svg:hover{
+  opacity: 1;
+}
+
+.about-svg-gmail{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-svg-gmail div{
+  position: absolute;
+  visibility: hidden;
+  top:27px;
+  text-align: center;
+  width:112px;
+  background-color: #61758E;
+  font-size: 14px;
+  padding:5px;
+  border-radius: 15px;
+}
+
+.about-svg-gmail:hover div{
+  visibility: visible;
 }
 
 .education-section{
@@ -228,7 +273,7 @@
 
 .anchor-div>svg{
   height: 13px;
-  fill: #D3D3D3;
+  fill: #4c5c70;
 }
 
 @media only screen and (max-width:700px) {
