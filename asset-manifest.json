@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/portfolioPage/static/css/main.e1f52c3f.css",
+    "main.js": "/portfolioPage/static/js/main.a5790312.js",
+    "static/js/453.241f0b5b.chunk.js": "/portfolioPage/static/js/453.241f0b5b.chunk.js",
+    "static/media/cv-builder2.png": "/portfolioPage/static/media/cv-builder2.a6f5e136f51a7a16c778.png",
+    "static/media/face.png": "/portfolioPage/static/media/face.59d7954ef6bfa7003915.png",
+    "static/media/PRtracker1.png": "/portfolioPage/static/media/PRtracker1.f12225fe97d24b024c3a.png",
+    "static/media/mail1.png": "/portfolioPage/static/media/mail1.fe8c7a7a958fdadfd63a.png",
+    "static/media/mail2.png": "/portfolioPage/static/media/mail2.9cbec11c8408226bda8b.png",
+    "static/media/cv-builder1.png": "/portfolioPage/static/media/cv-builder1.35dcfb746bdefab761b0.png",
+    "static/media/calculator1.png": "/portfolioPage/static/media/calculator1.12d2779ea8abf819bd09.png",
+    "static/media/chatapp1.png": "/portfolioPage/static/media/chatapp1.1a96d27b0d5f1576f15c.png",
+    "static/media/PRtracker2.png": "/portfolioPage/static/media/PRtracker2.5b82563e4dffa92110ab.png",
+    "static/media/chatapp2.png": "/portfolioPage/static/media/chatapp2.18263054322f683590f2.png",
+    "index.html": "/portfolioPage/index.html",
+    "main.e1f52c3f.css.map": "/portfolioPage/static/css/main.e1f52c3f.css.map",
+    "main.a5790312.js.map": "/portfolioPage/static/js/main.a5790312.js.map",
+    "453.241f0b5b.chunk.js.map": "/portfolioPage/static/js/453.241f0b5b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1f52c3f.css",
+    "static/js/main.a5790312.js"
+  ]
+}
