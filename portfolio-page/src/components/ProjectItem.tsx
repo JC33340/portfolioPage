@@ -53,7 +53,7 @@ export default function ProjectItem({data}:props){
             </div>
             <div className="anchor-container">
                 {data.youtubeLink && <div className="anchor-div"><LogoYoutube /> <a target = "_blank" className="project-item-a" href={data.youtubeLink}>Demo</a></div> }
-                <div className="anchor-div"><LogoGithub /><a target="_blank" className="project-item-a" href={data.githubLink}>Code</a></div>
+                <div className="anchor-div"><LogoGithub /><a style={{marginLeft:"3px"}} target="_blank" className="project-item-a" href={data.githubLink}>Code</a></div>
             </div>
             
         </div>

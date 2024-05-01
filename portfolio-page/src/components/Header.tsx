@@ -6,7 +6,7 @@ export default function Header(){
         <div className="header header-animation">
             <HeaderItem>About</HeaderItem>
             <HeaderItem>Education </HeaderItem>
-            <HeaderItem>Projects/Experience</HeaderItem>
+            <HeaderItem>Projects</HeaderItem>
         </div>
     )
 }
