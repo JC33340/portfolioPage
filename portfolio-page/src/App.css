@@ -209,9 +209,7 @@ html{
 
 .project-image-slides::-webkit-scrollbar{
   background-color:#4c5c70;
-  width:120px;
 }
-
 
 
 .project-image-slides::-webkit-scrollbar-thumb{
@@ -292,6 +290,15 @@ html{
   .project-image{
     width: 350px;
   }
+
+  .project-image-slider{
+    width: 350px;
+  }
+
+  .project-image-slides{
+    width: 350px;
+  }
+
   .project-item{
     width: 350px;
     font-size: 12px;
