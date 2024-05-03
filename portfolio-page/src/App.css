@@ -144,6 +144,7 @@ html{
 .education-section{
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   padding:20px;
   background-color: #61758E;
@@ -151,6 +152,7 @@ html{
 
 .education-item-container{
   display: flex;
+  justify-content: center;
   flex-wrap:wrap;
   gap:50px;
 }
