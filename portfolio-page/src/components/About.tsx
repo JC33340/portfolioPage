@@ -1,6 +1,7 @@
 import React from "react";
 import face from "../photos/face.png"
-import { LogoLinkedin,LogoGithub,LogoGmail} from "./Logos";
+import { LogoLinkedin,LogoGithub,LogoGmail,LogoDownload} from "./Logos";
+import CV from "../photos/Ho Wa Chan CV.png"
 
 export default function About(){
     
@@ -36,6 +37,13 @@ export default function About(){
                         <LogoGmail onclick = {onClick} onmouseover={onmouseover} />
                         <div>{clipboardText}</div>
                     </div>
+                    <div className="about-svg-item">
+                        <a href = {CV} download className="logo-download">
+                            <LogoDownload />
+                        </a>
+                        <div>Download CV</div>
+                    </div>
+                    
                 </div>
             </div>
             <div className="about-item">

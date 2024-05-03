@@ -1,4 +1,4 @@
-.body{
+body{
   margin:-8px;
   font-family: Arial, Helvetica, sans-serif;
   color: #D3D3D3;
@@ -127,6 +127,12 @@ html{
 
 .about-svg-item:hover div{
   visibility: visible;
+}
+
+.logo-dowload d{
+  fill: white;
+  stroke: white;
+  background-color: red;
 }
 
 .education-section{
@@ -307,6 +313,15 @@ html{
   }
 }
 
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #61758E;
+  color:white;
+  height:5rem;
+  font-size: 10px;
+}
 
 @keyframes entranceLeft{
   from{
