@@ -87,6 +87,12 @@ html{
   animation-fill-mode: backwards;
 }
 
+@media only screen and (max-width:700px){
+  .about-text{
+    font-size: 12px;
+  }
+}
+
 .about-svg{
   display:flex;
   column-gap: 15px;
@@ -151,7 +157,7 @@ html{
 
 @media only screen and (max-width:700px){
   .education-item-container{
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
