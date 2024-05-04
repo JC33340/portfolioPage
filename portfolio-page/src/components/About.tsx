@@ -18,7 +18,7 @@ export default function About(){
 
     return(
         <div className="about" id ="About">
-            <div className="about-item">
+            <div className="about-item about-left-side">
                 <div className="centered-flex-item name">Hi, I'm Jason</div>
                 <div className="centered-flex-item about-text">
                     Recent Msci Pharmacology graduate from UCL. 
