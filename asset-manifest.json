@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolioPage/static/css/main.14817f3a.css",
-    "main.js": "/portfolioPage/static/js/main.ebb84816.js",
+    "main.js": "/portfolioPage/static/js/main.546a01aa.js",
     "static/js/453.241f0b5b.chunk.js": "/portfolioPage/static/js/453.241f0b5b.chunk.js",
     "static/media/cv-builder2.png": "/portfolioPage/static/media/cv-builder2.a6f5e136f51a7a16c778.png",
     "static/media/face.png": "/portfolioPage/static/media/face.59d7954ef6bfa7003915.png",
@@ -10,17 +10,17 @@
     "static/media/mail2.png": "/portfolioPage/static/media/mail2.9cbec11c8408226bda8b.png",
     "static/media/cv-builder1.png": "/portfolioPage/static/media/cv-builder1.35dcfb746bdefab761b0.png",
     "static/media/calculator1.png": "/portfolioPage/static/media/calculator1.12d2779ea8abf819bd09.png",
-    "static/media/Ho Wa Chan CV.png": "/portfolioPage/static/media/Ho Wa Chan CV.1cd68958c6df4416d191.png",
+    "static/media/Ho Wa Chan CV.png": "/portfolioPage/static/media/Ho Wa Chan CV.79152ca540f674ed0ed2.png",
     "static/media/chatapp1.png": "/portfolioPage/static/media/chatapp1.1a96d27b0d5f1576f15c.png",
     "static/media/PRtracker2.png": "/portfolioPage/static/media/PRtracker2.5b82563e4dffa92110ab.png",
     "static/media/chatapp2.png": "/portfolioPage/static/media/chatapp2.18263054322f683590f2.png",
     "index.html": "/portfolioPage/index.html",
     "main.14817f3a.css.map": "/portfolioPage/static/css/main.14817f3a.css.map",
-    "main.ebb84816.js.map": "/portfolioPage/static/js/main.ebb84816.js.map",
+    "main.546a01aa.js.map": "/portfolioPage/static/js/main.546a01aa.js.map",
     "453.241f0b5b.chunk.js.map": "/portfolioPage/static/js/453.241f0b5b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14817f3a.css",
-    "static/js/main.ebb84816.js"
+    "static/js/main.546a01aa.js"
   ]
 }
