@@ -8,6 +8,7 @@ interface propTypes{
 }
 
 export default function EducationItem({school,location,duration,skillsLearned}:propTypes){
+
     const containerRef = React.useRef(null)
     const[isVisible,setIsVisible] = React.useState(false)
     
@@ -31,11 +32,18 @@ export default function EducationItem({school,location,duration,skillsLearned}:p
         }
     },[containerRef,options])
 
+    const [run,setRun] = React.useState(false)
+    React.useEffect(()=>{
+        if (isVisible){
+            setRun(true)
+        }
+    },[isVisible])
+    
 
     const skillsList:JSX.Element[] = skillsLearned.map(item=><li key = {item}>{item}</li>)
 
     return(
-        <div className="education-item" style={{animationPlayState:isVisible?"running":"paused"}} ref={containerRef}>
+        <div className="education-item" style={{animationPlayState:run?"running":"paused"}} ref={containerRef}>
             <div className="education-item-top">
                 <h3>{school}</h3>
                 <p className="education-item-duration italic">({duration})</p>

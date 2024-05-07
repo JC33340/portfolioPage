@@ -2,7 +2,6 @@ body{
   margin:-8px;
   font-family: Arial, Helvetica, sans-serif;
   color: #D3D3D3;
-  overflow-x: hidden;
 }
 
 .centered-flex-item{
@@ -17,6 +16,65 @@ html{
 
 .italic{
   font-style: italic;
+}
+
+
+.contact-sidebar-hidden{
+  position: fixed;
+  right:20px;
+  top: 50vh;
+  transform: translate(5vw,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  transition: transform 0.3s;
+  padding:7px;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+.contact-sidebar-visible{
+  position: fixed;
+  right:20px;
+  top: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  transform: translate(0,-50%);
+  transition: transform 0.3s;
+  padding:7px;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+
+.contact-sidebar-visible svg,.contact-sidebar-hidden svg{
+  width: 30px;
+  opacity: 0.5;
+}
+
+.contact-sidebar-visible svg:hover,.contact-sidebar-hidden svg:hover{
+  opacity: 1;
+}
+
+.contact-sidebar-hover-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact-sidebar-hover-item span{
+  position: absolute;
+  right:45px;
+  font-size: 12px;
+  text-wrap: nowrap;
+  visibility: hidden;
+}
+
+.contact-sidebar-hover-item:hover span{
+  visibility: visible;
 }
 
 .header{
@@ -127,7 +185,7 @@ html{
 .about-svg-item div{
   position: absolute;
   visibility: hidden;
-  top:27px;
+  top:33px;
   background-color: #61758E;
   font-size: 14px;
   padding:5px;
@@ -141,7 +199,6 @@ html{
 .logo-dowload d{
   fill: white;
   stroke: white;
-  background-color: red;
 }
 
 .education-section{
@@ -151,6 +208,7 @@ html{
   flex-direction: column;
   padding:20px;
   background-color: #61758E;
+  view-timeline: --test block;
 }
 
 .education-item-container{
@@ -347,11 +405,11 @@ footer{
 
 @keyframes entranceRight {
   from{
-    transform: translateX(30vw);
+    transform: translate(30vw);
     opacity: 0%;
   }
   to{
-    transform: translate(0);
+    transform: translate(0,inherit);
     opacity: 100%;
   }
 }

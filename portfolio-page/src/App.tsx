@@ -6,10 +6,12 @@ import About from './components/About';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import ContactSidebar from './components/ContactSidebar';
 
 function App() {
   return (
     <>
+      <ContactSidebar />
       <Header />
       <About />
       <Education />

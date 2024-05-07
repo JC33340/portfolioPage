@@ -2,20 +2,10 @@ import React from "react";
 import face from "../photos/face.png"
 import { LogoLinkedin,LogoGithub,LogoGmail,LogoDownload} from "./Logos";
 import CV from "../photos/Ho Wa Chan CV.png"
+import useDownloadClipboard from "../customHooks/useDownloadClipboard";
 
 export default function About(){
-    
-    const[clipboardText,setClipboardText] = React.useState("Copy to clipboard")
-
-    function onClick():void{
-        navigator.clipboard.writeText("jasonchanhw0531@gmail.com")
-        setClipboardText("Email copied")
-    }
-
-    function onmouseover(){
-        setClipboardText("Copy to clipboard")
-    }
-
+    const [clipboardText,onClick,onMouseOver] = useDownloadClipboard()
     return(
         <div className="about" id ="About">
             <div className="about-item about-left-side">
@@ -33,8 +23,8 @@ export default function About(){
                     <a href="https://www.github.com/JC33340" target="_blank">
                         <LogoGithub />
                     </a>
-                    <div className="about-svg-item">
-                        <LogoGmail onclick = {onClick} onmouseover={onmouseover} />
+                    <div className="about-svg-item" onClick={onClick} onMouseOver={onMouseOver}>
+                        <LogoGmail/>
                         <div>{clipboardText}</div>
                     </div>
                     <div className="about-svg-item">
