@@ -1,4 +1,5 @@
 import React from "react";
+import useIntersectionObserver from "../customHooks/useIntersectionObserver";
 
 interface propTypes{
     school: string;
@@ -9,41 +10,13 @@ interface propTypes{
 
 export default function EducationItem({school,location,duration,skillsLearned}:propTypes){
 
-    const containerRef = React.useRef(null)
-    const[isVisible,setIsVisible] = React.useState(false)
-    
-    const callBack = (entries:any) =>{
-        const [entry] = entries
-        setIsVisible(entry.isIntersecting)
-    }
-
-    const options = {
-        root: null,
-        rootMargin:"0px",
-        threshold: 1
-    }
-
-    React.useEffect(()=>{
-        const observer = new IntersectionObserver(callBack,options)
-        if (containerRef.current) observer.observe(containerRef.current)
-        
-        return()=>{
-            if (containerRef.current) observer.unobserve(containerRef.current)
-        }
-    },[containerRef,options])
-
-    const [run,setRun] = React.useState(false)
-    React.useEffect(()=>{
-        if (isVisible){
-            setRun(true)
-        }
-    },[isVisible])
+    const [isVisible,containerRef] = useIntersectionObserver(0.5)
     
 
     const skillsList:JSX.Element[] = skillsLearned.map(item=><li key = {item}>{item}</li>)
 
     return(
-        <div className="education-item" style={{animationPlayState:run?"running":"paused"}} ref={containerRef}>
+        <div className={`education-item ${isVisible?"scroll-show":"scroll-hidden"}`} ref={containerRef}>
             <div className="education-item-top">
                 <h3>{school}</h3>
                 <p className="education-item-duration italic">({duration})</p>

@@ -1,5 +1,6 @@
 import React from "react";
 import {LogoJavascript,LogoReact,LogoCSS,LogoDjango,LogoFlask,LogoGithub,LogoHTML,LogoTypscript,LogoYoutube,LogoWebsocket,LogoSQLite} from "./Logos"
+import useIntersectionObserver from "../customHooks/useIntersectionObserver";
 
 interface props{
     data:{
@@ -27,8 +28,11 @@ export default function ProjectItem({data}:props){
         else return (<></>)     
             
     })
+
+    const [isVisible,containerRef,firstRun] = useIntersectionObserver(0.1)
+
     return(
-        <div className="project-item">
+        <div ref={containerRef} className="project-item" style={{animationPlayState:`${firstRun?"running":"paused"}`}}>
             {data.pictures.length === 1?
             <img src={data.pictures[0]} className="project-image" /> :
 

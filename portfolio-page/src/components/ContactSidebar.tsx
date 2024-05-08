@@ -17,7 +17,6 @@ export default function ContactSidebar(){
     
     const callBack = (entries:any) =>{
         const [entry] = entries
-        console.log(entry.isIntersecting)
         setIsVisible(entry.isIntersecting)
     }
 

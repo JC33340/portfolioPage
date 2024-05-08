@@ -1,5 +1,6 @@
 import React from "react"
 import EducationItem from "./EducationItem"
+import useIntersectionObserver from "../customHooks/useIntersectionObserver"
 
 export default function Education(){
     const educationContent:{
@@ -19,9 +20,12 @@ export default function Education(){
             <EducationItem key = {item.school} school={item.school} location={item.location} skillsLearned={item.skillsLearned} duration={item.duration} />
         )
     })
+
+    const [isVisible,containerRef] = useIntersectionObserver(0.5)
+
     return(
         <div className="education-section" id ="Education">
-            <h1>Education</h1>
+            <h1 ref={containerRef} className={`${isVisible?"scroll-show":"scroll-hidden"}`}>Education</h1>
             <div className="education-item-container">
                 {display}
             </div>

@@ -23,7 +23,7 @@ html{
   position: fixed;
   right:20px;
   top: 50vh;
-  transform: translate(5vw,-50%);
+  transform: translate(50vw,-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -229,7 +229,16 @@ html{
   border: 5px solid white;
   border-radius: 10px;
   padding:15px;
-  animation: entranceDown 2s;
+}
+
+.education-item:nth-child(2){
+  transition-delay: 200ms;
+}
+.education-item:nth-child(3){
+  transition-delay: 400ms; 
+}
+.education-item:nth-child(4){
+  transition-delay: 600ms;
 }
 
 .education-item-top>h3,p{
@@ -256,10 +265,17 @@ html{
   background-color: #4c5c70;
 }
 
+.projects>h1{
+  animation: entranceLeft 1s;
+}
+
+.project-item{
+  animation:entranceLeft 1s;
+}
+
 .project-item-h2{
   margin-bottom: 3px;
 }
-
 
 .project-item-container{
   display: flex;
@@ -393,9 +409,21 @@ footer{
   font-size: 10px;
 }
 
+.scroll-show{
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.scroll-hidden{
+  opacity: 0;
+  transform: translateX(-5vw);
+  transition: all 1s;
+}
+
 @keyframes entranceLeft{
   from{
-    transform: translateX(-30vw);
+    transform: translateX(-10vw);
     opacity: 0%;
   }
   to{
@@ -406,7 +434,7 @@ footer{
 
 @keyframes entranceRight {
   from{
-    transform: translate(30vw);
+    transform: translate(10vw);
     opacity: 0%;
   }
   to{

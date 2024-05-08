@@ -9,6 +9,7 @@ import mail2 from "../photos/mail2.png"
 import calculator1 from "../photos/calculator1.png"
 import cvBuilder1 from "../photos/cv-builder1.png"
 import cvBuilder2 from "../photos/cv-builder2.png"
+import useIntersectionObserver from '../customHooks/useIntersectionObserver'
 
 
 export default function Projects(){
@@ -34,9 +35,11 @@ export default function Projects(){
         )
     })
 
+    const [isVisible,containerRef,firstRun] = useIntersectionObserver(0.5)
+
     return(
         <div className="projects" id = "Projects">
-            <h1>Projects</h1>
+            <h1 ref = {containerRef} style={{animationPlayState:`${firstRun?"running":"paused"}`}}>Projects</h1>
             <div className='project-item-container'>
                 {display}
             </div>
