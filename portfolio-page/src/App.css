@@ -30,7 +30,6 @@ html{
   row-gap: 10px;
   transition: transform 0.3s;
   padding:7px;
-  border: 1px solid white;
   border-radius: 7px;
 }
 
@@ -45,7 +44,6 @@ html{
   transform: translate(0,-50%);
   transition: transform 0.3s;
   padding:7px;
-  border: 1px solid white;
   border-radius: 7px;
 }
 
