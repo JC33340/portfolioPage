@@ -124,7 +124,9 @@ html{
   padding:0px 30px;
   display: flex;
   justify-content: space-evenly;
-  background-color: #4c5c70;
+  /*
+  background-color: #4c5c70;*/
+  background-color: red;
   height: 100vh;
   column-gap: 10px;
 }
@@ -401,39 +403,6 @@ html{
 .arrow-next:hover svg, .arrow-prev:hover svg{
   opacity: 1;
 }
-/*
-
-.project-image-slider{
-  width: 600px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.project-image-slides{
-  width: 600px;
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.project-image-slides::-webkit-scrollbar{
-  background-color:#4c5c70;
-}
-
-
-.project-image-slides::-webkit-scrollbar-thumb{
-  background-color: black;
-  border-radius: 10px;
-}
-
-.project-image{
-  width:600px;
-  border-radius: 10px;
-  scroll-snap-align: start;
-  margin-right: 20px;
-}
-*/
 
 .project-item-name-tech{
   display: flex;
