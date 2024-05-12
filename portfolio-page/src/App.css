@@ -157,6 +157,7 @@ html{
 .about-text{
   text-align: center;
   animation: entranceAboutText 2s;
+  animation-fill-mode: backwards;
   opacity: 0.5;
   font-size: 25px;
   animation-delay: 0.1s;
@@ -361,6 +362,48 @@ html{
 }
 
 .project-image-slider{
+  overflow: hidden;
+  width: 600px;
+  position: relative;
+}
+
+.project-image-slides{
+  display: flex;
+  transition: 1s;
+}
+
+
+.project-image{
+  width: 600px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.arrow-next{
+  position: absolute;
+  right:5px;
+  top:50%;
+  transform: translate(0,-50%);
+}
+
+.arrow-prev{
+  position:absolute;
+  left:5px;
+  top:50%;
+  transform: translate(0,-50%);
+}
+
+.arrow-next svg,.arrow-prev svg{
+  height:40px;
+  opacity: 0.5;
+}
+
+.arrow-next:hover svg, .arrow-prev:hover svg{
+  opacity: 1;
+}
+/*
+
+.project-image-slider{
   width: 600px;
   overflow: hidden;
   border-radius: 10px;
@@ -390,6 +433,7 @@ html{
   scroll-snap-align: start;
   margin-right: 20px;
 }
+*/
 
 .project-item-name-tech{
   display: flex;

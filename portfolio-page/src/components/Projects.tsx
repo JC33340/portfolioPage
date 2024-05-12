@@ -29,9 +29,9 @@ export default function Projects(){
         {name:"Calculator",description:"Basic calculator app",pictures:[calculator1],youtubeLink:undefined,githubLink:"https://github.com/JC33340/CalculatorApp.git",technologiesUsed:["react","typescript","HTML","CSS"]}
     ] 
 
-    const display: JSX.Element[] = projectInfo.map(item=>{
+    const display: JSX.Element[] = projectInfo.map((item,i)=>{
         return(
-            <ProjectItem data={item}/>
+            <ProjectItem key={item.name} id = {`projectItem${i}`}data={item}/>
         )
     })
 

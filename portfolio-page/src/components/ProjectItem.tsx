@@ -1,6 +1,7 @@
 import React from "react";
 import {LogoJavascript,LogoReact,LogoCSS,LogoDjango,LogoFlask,LogoGithub,LogoHTML,LogoTypscript,LogoYoutube,LogoWebsocket,LogoSQLite} from "./Logos"
 import useIntersectionObserver from "../customHooks/useIntersectionObserver";
+import {ArrowLeft, ArrowRight} from "./Logos"
 
 interface props{
     data:{
@@ -11,9 +12,10 @@ interface props{
         githubLink:string,
         technologiesUsed:string[]
     }
+    id:string
 }
 
-export default function ProjectItem({data}:props){
+export default function ProjectItem({data,id}:props){
 
     const techDisplay:JSX.Element[] = data.technologiesUsed.map(item=>{
         if (item==="javascript") return <LogoJavascript />
@@ -30,6 +32,32 @@ export default function ProjectItem({data}:props){
     })
 
     const [isVisible,containerRef,firstRun] = useIntersectionObserver(0.1)
+    const [steps,setSteps] = React.useState<number>(0)
+    const [slideCount,setSlideCount] = React.useState<number>(0)
+
+    const slider = document.querySelector<HTMLElement>(`#${id}`)
+    function handleClick(type:"next"|"prev"){
+        setSteps(prev=>{
+            if(slider){
+                if(type === "next"){
+                    setSlideCount(prev=>prev+1)
+                    return prev-slider.offsetWidth -10
+                } else{
+                    setSlideCount(prev=>prev-1)
+                    return prev+slider.offsetWidth +10
+                }
+                
+            }    
+            else { return prev}
+        }) 
+    }
+    React.useEffect(()=>{
+        console.log(steps)
+        if(slider){
+            slider.style.transform = `translateX(${steps}px)`
+        }
+    },[steps])
+
 
     return(
         <div ref={containerRef} className="project-item" style={{animationPlayState:`${firstRun?"running":"paused"}`}}>
@@ -37,14 +65,17 @@ export default function ProjectItem({data}:props){
             <img src={data.pictures[0]} className="project-image" /> :
 
             <div className="project-image-slider">
-                <div className="project-image-slides">
+                <div className="project-image-slides" id={id} >
                     {data.pictures.map(pic=>{
                         return(<img className="project-image" src={pic}/>)
                     })}
+                    
                 </div>
+                {slideCount != (data.pictures.length-1) && <div className="arrow-next" onClick={()=>handleClick("next")}><ArrowRight /></div>}
+                {slideCount != 0 && <div className="arrow-prev" onClick={()=>handleClick("prev")}><ArrowLeft /></div>}
             </div>
+
             }
-            
             
             <div className="project-item-name-tech">
                 <div>
