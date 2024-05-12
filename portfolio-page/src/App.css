@@ -75,6 +75,12 @@ html{
   visibility: visible;
 }
 
+@media only screen and (max-width:600px){
+  .contact-sidebar-visible, .contact-sidebar-hidden{
+    visibility: hidden;
+  }
+}
+
 .header{
   display: flex;
   gap: 30px;
@@ -114,10 +120,11 @@ html{
   justify-content: space-evenly;
   background-color: #4c5c70;
   height: 100vh;
+  column-gap: 10px;
 }
 
 .about-photo{
-  height: 25vw;
+  height: 350px;
   width: auto;
   animation: entranceRight 2s;
 }
@@ -134,11 +141,12 @@ html{
 }
 
 .name{
-  font-size: 4vw;
+  font-size: 40px;
   font-weight: 800;
   margin-bottom: 20px;
   animation-name:entranceLeft;
   animation-duration: 2s;
+  text-align: center;
 }
 
 .about-text{
@@ -151,6 +159,28 @@ html{
 @media only screen and (max-width:700px){
   .about-text{
     font-size: 12px;
+  }
+  
+  .about{
+    padding:0px 5px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .about-left-side{
+    padding-left: 0px;
+  }
+
+  .about-photo{
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width:850px){
+  .about-photo{
+    height: 280px;
   }
 }
 

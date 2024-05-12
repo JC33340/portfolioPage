@@ -21,11 +21,11 @@ export default function Education(){
         )
     })
 
-    const [isVisible,containerRef] = useIntersectionObserver(0.5)
+    const [isVisible,containerRef,firstRun] = useIntersectionObserver(0.5)
 
     return(
         <div className="education-section" id ="Education">
-            <h1 ref={containerRef} className={`${isVisible?"scroll-show":"scroll-hidden"}`}>Education</h1>
+            <h1 ref={containerRef} className={`${firstRun?"scroll-show":"scroll-hidden"}`}>Education</h1>
             <div className="education-item-container">
                 {display}
             </div>

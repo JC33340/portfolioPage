@@ -10,13 +10,13 @@ interface propTypes{
 
 export default function EducationItem({school,location,duration,skillsLearned}:propTypes){
 
-    const [isVisible,containerRef] = useIntersectionObserver(0.5)
+    const [isVisible,containerRef,firstRun] = useIntersectionObserver(0.5)
     
 
     const skillsList:JSX.Element[] = skillsLearned.map(item=><li key = {item}>{item}</li>)
 
     return(
-        <div className={`education-item ${isVisible?"scroll-show":"scroll-hidden"}`} ref={containerRef}>
+        <div className={`education-item ${firstRun?"scroll-show":"scroll-hidden"}`} ref={containerRef}>
             <div className="education-item-top">
                 <h3>{school}</h3>
                 <p className="education-item-duration italic">({duration})</p>
