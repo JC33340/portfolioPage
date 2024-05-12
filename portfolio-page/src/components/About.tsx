@@ -11,10 +11,7 @@ export default function About(){
             <div className="about-item about-left-side">
                 <div className="centered-flex-item name">Hi, I'm Jason</div>
                 <div className="centered-flex-item about-text">
-                    Msci graduate from UCL. 
-                    Self-taught in coding, namely Python (Django, Flask) and JavaScript (React, TypeScript) as well as HTML, CSS. 
-                    Currently producing personal projects to expand and develop my knowledge. 
-                    Highly motivated, adaptable, and dedicated to personal and professional development. 
+                    Software engineer
                 </div>
                 <div className="about-svg">
                     <a href="https://www.linkedin.com/in/ho-wa-chan-b207a0213" target="_blank">

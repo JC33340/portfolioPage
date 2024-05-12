@@ -81,6 +81,12 @@ html{
   }
 }
 
+@media only screen and (min-width:2500px){
+  .contact-sidebar-visible{
+    right:50px;
+  }
+}
+
 .header{
   display: flex;
   gap: 30px;
@@ -141,26 +147,41 @@ html{
 }
 
 .name{
-  font-size: 40px;
+  font-size: 80px;
   font-weight: 800;
-  margin-bottom: 20px;
   animation-name:entranceLeft;
   animation-duration: 2s;
   text-align: center;
 }
 
 .about-text{
-  text-align: justify;
-  animation: entranceLeft 2s;
+  text-align: center;
+  animation: entranceAboutText 2s;
+  opacity: 0.5;
+  font-size: 25px;
   animation-delay: 0.1s;
-  animation-fill-mode: backwards;
+}
+
+@keyframes entranceAboutText {
+  from{
+    transform: translateX(-10vw);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 0.5;
+  }
 }
 
 @media only screen and (max-width:700px){
   .about-text{
-    font-size: 12px;
+    font-size: 18px;
   }
   
+  .name{
+    font-size: 32px;
+  }
+
   .about{
     padding:0px 5px;
     flex-direction: column-reverse;
@@ -182,6 +203,27 @@ html{
   .about-photo{
     height: 280px;
   }
+  .name{
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width:1600px) and (min-width:851px){
+  .name{
+    font-size: 72px;
+  }
+}
+
+@media only screen and (min-width:2500px){
+  .name{
+    font-size:150px;
+  }
+  .about-photo{
+    height: 600px;
+  }
+  .about-text{
+    font-size: 50px;
+  }
 }
 
 .about-svg{
@@ -199,6 +241,12 @@ html{
   height:25px;
   opacity: 0.5;
   fill:#4c5c70;
+}
+
+@media only screen and (min-width:2500px){
+  .about-svg svg{
+    height: 40px;
+  }
 }
 
 .about-svg svg:hover{
@@ -424,6 +472,34 @@ html{
   }
   .project-item-tech-logo>svg{
     height: 25px;
+  }
+}
+
+@media only screen and (min-width:2500px){
+  .project-image{
+    width: 1000px;
+    height: auto;
+  }
+
+  .project-image-slider{
+    width: 1000px;
+  }
+
+  .project-image-slides{
+    width: 1000px;
+  }
+
+  .project-item{
+    width: 1000px;
+    font-size: 20px;
+  }
+
+  .project-item-tech-logo>svg{
+    height: 50px;
+  }
+
+  .project-item-tech-logo .logo-text{
+    top:60px;
   }
 }
 
