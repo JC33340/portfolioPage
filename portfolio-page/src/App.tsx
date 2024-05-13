@@ -11,7 +11,6 @@ import ContactSidebar from './components/ContactSidebar';
 function App() {
   return (
     <>
-      <ContactSidebar />
       <Header />
       <About />
       <Education />
