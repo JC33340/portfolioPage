@@ -52,12 +52,10 @@ export default function ProjectItem({data,id}:props){
         }) 
     }
     React.useEffect(()=>{
-        console.log(steps)
         if(slider){
             slider.style.transform = `translateX(${steps}px)`
         }
     },[steps])
-    console.log(slider?.offsetHeight, slider?.offsetWidth)
 
     return(
         <div ref={containerRef} className="project-item" style={{animationPlayState:`${firstRun?"running":"paused"}`}}>

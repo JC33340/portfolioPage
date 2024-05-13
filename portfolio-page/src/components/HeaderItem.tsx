@@ -5,7 +5,6 @@ interface propTypes {
 }
 
 export default function HeaderItem({children}:propTypes){
-    console.log(children)
     return(
         <a className="header-item" href = {`#${children}`}>
             {children}
