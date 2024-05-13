@@ -36,18 +36,18 @@ export default function ContactSidebar(){
     },[containerRef,options])
     
     return(
-        <div className={`contact-bar ${isVisible?"contact-bar-hidden":"contact-bar-visible"}`}>
-            <a href="https://www.linkedin.com/in/ho-wa-chan-b207a0213" target="_blank">
+        <div className={`contact-bar`}>
+            <a href="https://www.linkedin.com/in/ho-wa-chan-b207a0213" className={`contact-item ${isVisible?"contact-bar-hidden":"contact-bar-visible"}`}  target="_blank">
                 <LogoLinkedin />
             </a>
-            <a href="https://www.github.com/JC33340" target="_blank">
+            <a href="https://www.github.com/JC33340" className={`contact-item ${isVisible?"contact-bar-hidden":"contact-bar-visible"}`} target="_blank">
                 <LogoGithub />
             </a>
-            <div className="contact-bar-hover-item" onClick={onClick} onMouseOver={onMouseOver}>
+            <div className={`contact-bar-hover-item contact-item ${isVisible?"contact-bar-hidden":"contact-bar-visible"}`} onClick={onClick} onMouseOver={onMouseOver}>
                 <LogoGmail />
                 <span>{clipboardText}</span>
             </div>
-            <div className="contact-bar-hover-item">
+            <div className={`contact-bar-hover-item contact-item ${isVisible?"contact-bar-hidden":"contact-bar-visible"}`}>
                 <a href = {CV} download className="logo-download">
                     <LogoDownload />
                 </a>
