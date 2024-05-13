@@ -124,9 +124,7 @@ html{
   padding:0px 30px;
   display: flex;
   justify-content: space-evenly;
-  /*
-  background-color: #4c5c70;*/
-  background-color: red;
+  background-color: #4c5c70;
   height: 100vh;
   column-gap: 10px;
 }
@@ -377,6 +375,7 @@ html{
 
 .project-image{
   width: 600px;
+  height: 280px;
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -469,6 +468,7 @@ html{
 @media only screen and (max-width:700px) {
   .project-image{
     width: 350px;
+    height: 164px;
   }
 
   .project-image-slider{
@@ -491,7 +491,7 @@ html{
 @media only screen and (min-width:2500px){
   .project-image{
     width: 1000px;
-    height: auto;
+    height: 470px;
   }
 
   .project-image-slider{

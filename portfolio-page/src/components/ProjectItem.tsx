@@ -57,12 +57,13 @@ export default function ProjectItem({data,id}:props){
             slider.style.transform = `translateX(${steps}px)`
         }
     },[steps])
-
+    console.log(slider?.offsetHeight, slider?.offsetWidth)
 
     return(
         <div ref={containerRef} className="project-item" style={{animationPlayState:`${firstRun?"running":"paused"}`}}>
             {data.pictures.length === 1?
-            <img src={data.pictures[0]} className="project-image" /> :
+
+            <img src={data.pictures[0]} className="project-image" />:
 
             <div className="project-image-slider">
                 <div className="project-image-slides" id={id} >
