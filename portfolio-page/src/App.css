@@ -92,7 +92,7 @@ html{
 .header{
   display: flex;
   justify-content: space-between;
-  padding:10px 20px;
+  padding:15px 20px;
   position: fixed;
   top:0;
   right:0;
@@ -175,7 +175,6 @@ html{
 .about-text{
   text-align: center;
   position: relative;
-  overflow: hidden;
   animation: entranceAboutText 2s;
   animation-fill-mode: backwards;
   opacity: 0.5;
@@ -256,7 +255,6 @@ html{
   animation-delay: 0.2s;
   animation-fill-mode: backwards;
   position: relative;
-  overflow: hidden;
 }
 
 .about-svg svg{
@@ -283,7 +281,8 @@ html{
 .about-svg-item div{
   position: absolute;
   visibility: hidden;
-  top:33px;
+  text-wrap: nowrap;
+  top:40px;
   background-color: #7C8FA6;
   font-size: 14px;
   padding:5px;
@@ -294,7 +293,7 @@ html{
   visibility: visible;
 }
 
-#logo-download{
+.logo-download{
   fill:#fff;
 }
 
@@ -308,7 +307,7 @@ html{
 }
 
 .arrow-container svg{
-  height: 60px;
+  height: 80px;
 }
 
 .arrow-link{
