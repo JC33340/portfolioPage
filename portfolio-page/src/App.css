@@ -158,10 +158,11 @@ html{
 
 .about-left-side{
   padding-left:80px;
+  row-gap: 15px;
 }
 
 .name{
-  font-size: 80px;
+  font-size: 200px;
   font-weight: 800;
   width: fit-content;
   animation-name:entranceLeft;
@@ -178,7 +179,7 @@ html{
   animation: entranceAboutText 2s;
   animation-fill-mode: backwards;
   opacity: 0.5;
-  font-size: 25px;
+  font-size: 35px;
   animation-delay: 0.1s;
 }
 
@@ -224,13 +225,13 @@ html{
     height: 280px;
   }
   .name{
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
 @media only screen and (max-width:1600px) and (min-width:851px){
   .name{
-    font-size: 72px;
+    font-size: 90px;
   }
 }
 
@@ -259,7 +260,7 @@ html{
 }
 
 .about-svg svg{
-  height:25px;
+  height:35px;
   opacity: 0.5;
 }
 
@@ -531,7 +532,7 @@ footer{
   background-color: #61758E;
   color:white;
   height:5rem;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .scroll-show{
