@@ -17,11 +17,14 @@ export default function useIntersectionObserver(threshold:number):[boolean,Mutab
 
     React.useEffect(()=>{
         const observer = new IntersectionObserver(callBack,options)
-        const ref = containerRef
-        if (ref.current) observer.observe(ref.current)
+        let ref = null
+        if (containerRef.current){
+            observer.observe(containerRef.current)
+            ref = containerRef.current
+        } 
         
         return()=>{
-            if (ref.current) observer.unobserve(ref.current)
+            if (ref) observer.unobserve(ref)
         }
     },[containerRef,options])
 
