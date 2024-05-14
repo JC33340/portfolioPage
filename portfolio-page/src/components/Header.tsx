@@ -1,9 +1,8 @@
 import React from 'react'
-import HeaderItem from './HeaderItem'
 import ContactSidebar from './ContactSidebar'
 
 export default function Header(){
-    
+    const[headerVisible,setHeaderVisible] = React.useState<boolean>(false)
     
 
     function handleScroll(e:any){
@@ -11,10 +10,10 @@ export default function Header(){
         const header:HTMLElement|null = document.querySelector(".header")
         const transitionThreshold:number = header? (window.innerHeight - header.offsetHeight-10):window.innerHeight-70
         console.log(scrollTop, transitionThreshold)
-        if (scrollTop > transitionThreshold && header){
-            header.classList.add("background-gray")
+        if (scrollTop > transitionThreshold){
+            setHeaderVisible(true)
         }else{
-            header?.classList.remove("background-gray")
+            setHeaderVisible(false)
         }
 
     }
@@ -32,13 +31,11 @@ export default function Header(){
     },[])
 
     return(
-        <div className="header header-animation">
-            <div className='header-left'>
-                <HeaderItem>About</HeaderItem>
-                <HeaderItem>Projects</HeaderItem>
+        <div className={`header ${headerVisible?"background-gray":""}`}>
+            <div className={`header-name ${headerVisible?"header-name-visible":"header-name-hidden"}`}>Jason Chan
             </div>
             
-            <ContactSidebar />
+            <ContactSidebar headerVisible={headerVisible} />
         </div>
     )
 }

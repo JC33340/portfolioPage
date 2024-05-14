@@ -34,7 +34,7 @@ html{
 }
 
 .contact-bar-visible{
-  transform: translateY(0);
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -88,9 +88,6 @@ html{
 
 }
 
-@media only screen and (min-width:2500px){
-
-}
 
 .header{
   display: flex;
@@ -100,38 +97,35 @@ html{
   top:0;
   right:0;
   left:0;
-  backdrop-filter: blur(5px);
   z-index: 10;
-}
-
-.header-left{
-  display: flex;
-  column-gap: 30px;  
-  animation: entranceDown 1s;
-}
-
-.header-item{
-  font-size: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  color:inherit;
-  transition: all 1s;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.header-item:hover{
-  background-color: #7C8FA6;
+  background-color: #61758E;
+  visibility: hidden;
 }
 
 .background-gray{
-  background-color: #61758E;
+  visibility: visible;
+}
+
+.header-name{
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+}
+
+.header-name-hidden{
+  transform: translateX(-2vw);
+  opacity: 0;
+}
+
+.header-name-visible{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 600px) {
 
-  .header-left{
-    column-gap: 5px;
+  .header-name{
+    font-size: 20px;
   }
 
   .header-item{
@@ -159,6 +153,7 @@ html{
   display: flex;
   flex-direction: column;
   justify-content:  center;
+  align-items: center;
 }
 
 .about-left-side{
@@ -168,13 +163,18 @@ html{
 .name{
   font-size: 80px;
   font-weight: 800;
+  width: fit-content;
   animation-name:entranceLeft;
   animation-duration: 2s;
   text-align: center;
+  position: relative;
 }
+
 
 .about-text{
   text-align: center;
+  position: relative;
+  overflow: hidden;
   animation: entranceAboutText 2s;
   animation-fill-mode: backwards;
   opacity: 0.5;
@@ -255,12 +255,12 @@ html{
   animation-delay: 0.2s;
   animation-fill-mode: backwards;
   position: relative;
+  overflow: hidden;
 }
 
 .about-svg svg{
   height:25px;
   opacity: 0.5;
-  fill:#4c5c70;
 }
 
 @media only screen and (min-width:2500px){
@@ -283,7 +283,7 @@ html{
   position: absolute;
   visibility: hidden;
   top:33px;
-  background-color: #61758E;
+  background-color: #7C8FA6;
   font-size: 14px;
   padding:5px;
   border-radius: 15px;
@@ -293,9 +293,50 @@ html{
   visibility: visible;
 }
 
-.logo-dowload d{
-  fill: white;
-  stroke: white;
+#logo-download{
+  fill:#fff;
+}
+
+.arrow-container{
+  position: absolute;
+  bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.arrow-container svg{
+  height: 60px;
+}
+
+.arrow-link{
+  text-decoration: none;
+  color: #D3D3D3;
+  transform: rotate(90deg);
+  display: flex;
+}
+
+.link--arrowed .arrow-icon {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.link--arrowed .arrow-icon--circle {
+  -webkit-transition: stroke-dashoffset .3s ease;
+  transition: stroke-dashoffset .3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+
+.link--arrowed:hover .arrow-icon {
+  -webkit-transform: translate3d(10px, 0, 0);
+          transform: translate3d(10px, 0, 0);
+}
+.link--arrowed:hover .arrow-icon--circle {
+  stroke-dashoffset: 0;
 }
 
 
@@ -303,12 +344,14 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:10px;
+  padding:40px 10px;
   background-color: #4c5c70;
 }
 
 .projects>h1{
+  margin-top:0px;
   animation: entranceLeft 1s;
+  font-size: 40px;
 }
 
 .project-item{

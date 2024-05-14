@@ -3,40 +3,13 @@ import { LogoGithub,LogoGmail,LogoLinkedin,LogoDownload } from "./Logos";
 import CV from "../photos/Ho Wa Chan CV.png"
 import useDownloadClipboard from "../customHooks/useDownloadClipboard";
 
-export default function ContactSidebar(){
+export default function ContactSidebar({headerVisible}: {headerVisible:boolean}){
 
     const [clipboardText,onClick,onMouseOver] = useDownloadClipboard()
-    const [containerRef,setContinerRef] = React.useState<Element|null>()
 
-    React.useEffect(()=>{
-        setContinerRef(document.querySelector(".about-svg"))
-    },[])
-
-    const[isVisible,setIsVisible] = React.useState(true)
-
-    
-    const callBack = (entries:any) =>{
-        const [entry] = entries
-        setIsVisible(entry.isIntersecting)
-    }
-
-    const options = {
-        root: null,
-        rootMargin:"0px",
-        threshold: 0.1
-    }
-
-    React.useEffect(()=>{
-        const observer = new IntersectionObserver(callBack,options)
-        if (containerRef) observer.observe(containerRef)
-        
-        return()=>{
-            if (containerRef) observer.unobserve(containerRef)
-        }
-    },[containerRef,options])
     
     return(
-        <div className={`contact-bar ${isVisible?"contact-bar-hidden":"contact-bar-visible"}`}>
+        <div className={`contact-bar ${headerVisible?"contact-bar-visible":"contact-bar-hidden"}`}>
             <a href="https://www.linkedin.com/in/ho-wa-chan-b207a0213"   target="_blank">
                 <LogoLinkedin />
             </a>
