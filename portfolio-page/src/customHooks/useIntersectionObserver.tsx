@@ -17,7 +17,7 @@ export default function useIntersectionObserver(threshold:number):[boolean,Mutab
 
     React.useEffect(()=>{
         const observer = new IntersectionObserver(callBack,options)
-        let ref = null
+        let ref:MutableRefObject<null>|HTMLElement|null = null
         if (containerRef.current){
             observer.observe(containerRef.current)
             ref = containerRef.current
