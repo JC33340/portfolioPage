@@ -1,11 +1,18 @@
 import React from "react";
 import face from "../photos/face.png"
 import { LogoLinkedin,LogoGithub,LogoGmail,LogoDownload} from "./Logos";
-import CV from "../photos/Ho Wa Chan CV.png"
+import CV from "../photos/Ho Wa Chan CV.pdf"
 import useDownloadClipboard from "../customHooks/useDownloadClipboard";
 
 export default function About(){
     const [clipboardText,onClick,onMouseOver] = useDownloadClipboard()
+
+    function scrollTo(){
+        const projectPosition = document.querySelector("#Projects")?.getBoundingClientRect()
+        const header = document.querySelector<HTMLElement>(".header")?.offsetHeight
+        console.log(projectPosition?.top)
+        if(projectPosition&&header) window.scrollBy(0,projectPosition?.top-header)
+    }
     return(
         <div className="about" id ="About">
             <div className="about-item about-left-side">
@@ -29,7 +36,7 @@ export default function About(){
                         <div>{clipboardText}</div>
                     </div>
                     <div className="about-svg-item">
-                        <a href = {CV} download className="logo-download">
+                        <a href = {CV} download="Ho Wa Chan CV" className="logo-download">
                             <LogoDownload />
                         </a>
                         <div>Download CV</div>
@@ -44,8 +51,8 @@ export default function About(){
                 
             </div>
             
-            <div className="arrow-container">
-                <a className="arrow-link link--arrowed" href="#Projects">
+            <div className="arrow-container" onClick={scrollTo}>
+                <a className="arrow-link link--arrowed">
                     <svg className="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                         <g fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round" stroke-miterlimit="10">
                             <circle className="arrow-icon--circle" cx="16" cy="16" r="15.12"></circle>

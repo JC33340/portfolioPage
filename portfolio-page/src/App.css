@@ -339,6 +339,11 @@ html{
   stroke-dashoffset: 0;
 }
 
+@media only screen and (max-width:600px){
+  .arrow-container svg{
+    height: 50px;
+  }
+}
 
 .projects{
   display: flex;

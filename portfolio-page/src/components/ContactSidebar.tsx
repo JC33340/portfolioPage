@@ -1,6 +1,6 @@
 import React from "react";
 import { LogoGithub,LogoGmail,LogoLinkedin,LogoDownload } from "./Logos";
-import CV from "../photos/Ho Wa Chan CV.png"
+import CV from "../photos/Ho Wa Chan CV.pdf"
 import useDownloadClipboard from "../customHooks/useDownloadClipboard";
 
 export default function ContactSidebar({headerVisible}: {headerVisible:boolean}){
@@ -21,7 +21,7 @@ export default function ContactSidebar({headerVisible}: {headerVisible:boolean})
                 <span>{clipboardText}</span>
             </div>
             <div className={`contact-bar-hover-item`}>
-                <a href = {CV} download className="logo-download">
+                <a href = {CV} download="Ho Wa Chan CV" className="logo-download">
                     <LogoDownload />
                 </a>
                 <span>Download CV</span>
