@@ -388,7 +388,6 @@ html{
 
 .project-image{
   width: 600px;
-  height: 280px;
   border-radius: 10px;
   margin-right: 10px;
 }
@@ -480,20 +479,19 @@ html{
 
 @media only screen and (max-width:700px) {
   .project-image{
-    width: 350px;
-    height: 164px;
+    width: 300px;
   }
 
   .project-image-slider{
-    width: 350px;
+    width: 300px;
   }
 
   .project-image-slides{
-    width: 350px;
+    width: 300px;
   }
 
   .project-item{
-    width: 350px;
+    width: 300px;
     font-size: 12px;
   }
   .project-item-tech-logo>svg{
@@ -504,7 +502,6 @@ html{
 @media only screen and (min-width:2500px){
   .project-image{
     width: 1000px;
-    height: 470px;
   }
 
   .project-image-slider{

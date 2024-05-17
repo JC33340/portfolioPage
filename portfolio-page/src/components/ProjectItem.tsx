@@ -61,7 +61,7 @@ export default function ProjectItem({data,id}:props){
         <div ref={containerRef} className="project-item" style={{animationPlayState:`${firstRun?"running":"paused"}`}}>
             {data.pictures.length === 1?
 
-            <img src={data.pictures[0]} className="project-image" />:
+            <img src={data.pictures[0]} style={{height:`${document.querySelector<HTMLElement> (".project-image-slider")?.offsetHeight}px`}} className="project-image" />:
 
             <div className="project-image-slider">
                 <div className="project-image-slides" id={id} >

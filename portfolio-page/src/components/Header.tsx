@@ -8,7 +8,8 @@ export default function Header(){
     function handleScroll(e:any){
         const scrollTop:number = e.target.documentElement.scrollTop
         const header:HTMLElement|null = document.querySelector(".header")
-        const transitionThreshold:number = header? (window.innerHeight - header.offsetHeight-10):window.innerHeight-70
+        console.log(header?.offsetHeight)
+        const transitionThreshold:number = header? (window.innerHeight - header.offsetHeight-30):window.innerHeight-80
         if (scrollTop > transitionThreshold){
             setHeaderVisible(true)
         }else{
