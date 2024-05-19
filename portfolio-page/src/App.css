@@ -85,7 +85,33 @@ html{
   top: 28px;
   font-size: 10px;
 }
+}
 
+@media only screen and (min-width: 1600px){
+  .contact-bar svg{
+    height: 50px;
+  }
+  .contact-bar{
+    column-gap:20px;
+  }
+
+  .contact-bar-hover-item span{
+    top:55px;
+  }
+}
+
+@media only screen and (min-width:2200px){
+  .contact-bar svg{
+    height: 70px;
+  }
+  .contact-bar{
+    column-gap:40px;
+  }
+
+  .contact-bar-hover-item span{
+    top:75px;
+    font-size: 25px;
+  }
 }
 
 
@@ -133,6 +159,22 @@ html{
   }
 }
 
+@media only screen and (min-width: 1600px){
+  .header-name{
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width:2200px){
+  .header{
+    padding: 20px 30px;
+  }
+  .header-name{
+    font-size:80px;
+  }
+}
+
+
 .about{
   padding:0px 30px;
   display: flex;
@@ -162,7 +204,7 @@ html{
 }
 
 .name{
-  font-size: 200px;
+  font-size: 100px;
   font-weight: 800;
   width: fit-content;
   animation-name:entranceLeft;
@@ -193,59 +235,6 @@ html{
   }
 }
 
-@media only screen and (max-width:700px){
-  .about-text{
-    font-size: 18px;
-  }
-  
-  .name{
-    font-size: 32px;
-  }
-
-  .about{
-    padding:0px 5px;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-    row-gap: 10px;
-  }
-
-  .about-left-side{
-    padding-left: 0px;
-  }
-
-  .about-photo{
-    height: 200px;
-  }
-}
-
-@media only screen and (max-width:850px) and (min-width:701px){
-  .about-photo{
-    height: 280px;
-  }
-  .name{
-    font-size: 40px;
-  }
-}
-
-@media only screen and (max-width:1600px) and (min-width:851px){
-  .name{
-    font-size: 90px;
-  }
-}
-
-@media only screen and (min-width:2500px){
-  .name{
-    font-size:150px;
-  }
-  .about-photo{
-    height: 600px;
-  }
-  .about-text{
-    font-size: 50px;
-  }
-}
-
 .about-svg{
   display:flex;
   column-gap: 15px;
@@ -259,13 +248,7 @@ html{
 
 .about-svg svg{
   height:35px;
-  opacity: 0.5;
-}
-
-@media only screen and (min-width:2500px){
-  .about-svg svg{
-    height: 40px;
-  }
+  opacity: 0.7;
 }
 
 .about-svg svg:hover{
@@ -289,12 +272,123 @@ html{
   border-radius: 15px;
 }
 
+
 .about-svg-item:hover div{
   visibility: visible;
 }
 
 .logo-download{
   fill:#fff;
+}
+
+@media only screen and (max-width:700px){
+  .about-text{
+    font-size: 18px;
+  }
+  
+  .name{
+    font-size: 32px;
+  }
+
+  .about-item svg{
+    height: 30px;
+  }
+
+  .about{
+    padding:0px 5px;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+  }
+
+  .about-left-side{
+    padding-left: 0px;
+  }
+
+  .about-photo{
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width:701px) and (max-width:900px){
+  .name{
+    font-size: 50px;
+  }
+
+  .about-text{
+    font-size:30px;
+  }
+
+  .about-photo{
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width:901px) and (max-width:1025px){
+  .name{
+    font-size:65px;
+  }
+  
+  .about-left-side{
+    padding-left:30px;
+  }
+}
+
+
+@media only screen and (min-width:1600px){
+
+  .name{
+    font-size: 130px;
+  }
+
+  .about-text{
+    font-size: 50px;
+  }
+
+  .about-svg svg{
+    height: 40px;
+  }
+
+  .about-photo{
+    height: 500px;
+  }
+  
+  .about-svg-item div{
+    top: 45px;
+    font-size: 15px;
+  }
+  
+  .about-left-side{
+    padding-left: 90px;
+  }
+}
+
+@media only screen and (min-width:2200px){
+  .name{
+    font-size:180px
+  }
+
+  .about-text{
+    font-size: 80px;
+  }
+
+  .about-item svg{
+    height: 60px;
+  }
+
+  .about-left-side{
+    padding-left: 150px;
+  }
+
+  .about-photo{
+    height: 700px;
+  }
+
+  .about-svg-item div{
+    top: 68px;
+    font-size: 25px;
+  }
 }
 
 .arrow-container{
@@ -342,6 +436,12 @@ html{
 @media only screen and (max-width:600px){
   .arrow-container svg{
     height: 50px;
+  }
+}
+
+@media only screen and (min-width:1600px){
+  .arrow-container svg{
+    height:120px;
   }
 }
 
@@ -499,7 +599,33 @@ html{
   }
 }
 
-@media only screen and (min-width:2500px){
+@media only screen and (min-width:901px) and (max-width:1025px){
+  .project-image{
+    width: 800px;
+  }
+
+  .project-image-slider{
+    width: 800px;
+  }
+
+  .project-image-slides{
+    width: 800px;
+  }
+
+  .project-item{
+    width: 800px;
+    font-size: 12px;
+  }
+  .project-item-tech-logo>svg{
+    height: 25px;
+  }
+}
+
+@media only screen and (min-width:1600px){
+  .projects>h1{
+    font-size: 60px;
+  }
+  
   .project-image{
     width: 1000px;
   }
@@ -523,6 +649,44 @@ html{
 
   .project-item-tech-logo .logo-text{
     top:60px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 2200px){
+  .projects>h1{
+    font-size: 80px;
+  }
+  
+  .project-image{
+    width: 1200px;
+  }
+
+  .project-image-slider{
+    width: 1200px;
+  }
+
+  .project-image-slides{
+    width: 1200px;
+  }
+
+  .project-item{
+    width: 1200px;
+    font-size: 30px;
+  }
+
+  .project-item-tech-logo>svg{
+    height: 65px;
+  }
+
+  .project-item-tech-logo .logo-text{
+    top:75px;
+    font-size:20px;
+  }
+
+  .anchor-div>svg{
+    height: 20px;
+    fill: #4c5c70;
   }
 }
 
