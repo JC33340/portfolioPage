@@ -1,5 +1,5 @@
 import React from "react";
-import {LogoJavascript,LogoReact,LogoCSS,LogoDjango,LogoFlask,LogoGithub,LogoHTML,LogoTypscript,LogoYoutube,LogoWebsocket,LogoSQLite} from "./Logos"
+import {LogoLink,LogoJavascript,LogoReact,LogoCSS,LogoDjango,LogoFlask,LogoGithub,LogoHTML,LogoTypscript,LogoYoutube,LogoWebsocket,LogoSQLite} from "./Logos"
 import useIntersectionObserver from "../customHooks/useIntersectionObserver";
 import {ArrowLeft, ArrowRight} from "./Logos"
 
@@ -10,7 +10,8 @@ interface props{
         pictures:string[], 
         youtubeLink:string|undefined,
         githubLink:string,
-        technologiesUsed:string[]
+        technologiesUsed:string[],
+        Link?:string
     }
     id:string
 }
@@ -88,6 +89,7 @@ export default function ProjectItem({data,id}:props){
             <div className="anchor-container">
                 {data.youtubeLink && <div className="anchor-div"><LogoYoutube /> <a target = "_blank" className="project-item-a" href={data.youtubeLink}>Demo</a></div> }
                 <div className="anchor-div"><LogoGithub /><a style={{marginLeft:"3px"}} target="_blank" className="project-item-a" href={data.githubLink}>Repo</a></div>
+                {data.Link ? <div className="anchor-div"><LogoLink /><a style={{marginLeft:"3px"}} target="_blank" className="project-item-a" href={data.Link}>Link</a></div>:<></>}
             </div>
             
         </div>
