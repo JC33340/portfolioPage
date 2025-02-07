@@ -7,9 +7,12 @@ import PRtracker1 from "../photos/PRtracker1.png"
 import PRtracker2 from "../photos/PRtracker2.png"
 import mail1 from "../photos/mail1.png"
 import mail2 from "../photos/mail2.png"
-import calculator1 from "../photos/calculator1.png"
 import cvBuilder1 from "../photos/cv-builder1.png"
 import cvBuilder2 from "../photos/cv-builder2.png"
+import minigames1 from "../photos/minigames1.png"
+import minigames2 from "../photos/minigames2.png"
+import minigames3 from "../photos/minigames3.png"
+import minigames4 from "../photos/minigames4.png"
 import useIntersectionObserver from '../customHooks/useIntersectionObserver'
 
 
@@ -19,16 +22,15 @@ export default function Projects(){
         name:string,
         description:string,
         pictures:string[], 
-        youtubeLink:string|undefined,
         githubLink:string,
         technologiesUsed:string[],
         Link?:string
     }[] =[
-        {name:"CV-Builder",description:"Converts user input into a downloadable PDF",pictures:[cvBuilder1,cvBuilder2],youtubeLink:undefined,githubLink:"https://github.com/JC33340/CVbuilder2",technologiesUsed:["react","typescript","HTML","CSS",'tailwind'], Link:'https://cvbuilder2-q33qjdty3-jc33340s-projects.vercel.app/'},
-        {name:"Calculator",description:"Basic calculator app",pictures:[calculator1],youtubeLink:undefined,githubLink:"https://github.com/JC33340/CalculatorApp.git",technologiesUsed:["react","typescript","HTML","CSS"],Link:'https://calculatorapp-cwq.pages.dev'},
-        {name:"PR tracker",description:"Enter and keep track of PR progress in the gym",pictures:[PRtracker1,PRtracker2],youtubeLink:"https://youtu.be/PSEs7yLWNes",githubLink:"https://github.com/code50/137620817/tree/ec2e1756914286afef16542258eeb663cd85a442/final_project",technologiesUsed:["flask","HTML","CSS","javascript"]},
-        {name:"E-mail Replica",description:"A single page replica of an Email application",pictures:[mail1,mail2],youtubeLink:"https://youtu.be/gNSodzbtWhM",githubLink:"https://github.com/JC33340/mail.git",technologiesUsed:["django","HTML","CSS","SQLite"]},
-        {name:"Chat-App", description:"Websocket chat app",pictures:[chatapp1,chatapp2,chatapp3],youtubeLink:"https://youtu.be/IUKFniJzdYs",githubLink:"https://github.com/JC33340/chat.git",technologiesUsed:["django","websocket","HTML","CSS"]},
+        {name: 'Minigames App', description:"app containing some classic minigames", pictures:[minigames1,minigames2,minigames3,minigames4],githubLink:'https://github.com/JC33340/minigames',technologiesUsed:['HTML','react','typescript','tailwind'],Link:'https://minigames-mu.vercel.app/'},
+        {name:"CV-Builder",description:"Converts user input into a downloadable PDF",pictures:[cvBuilder1,cvBuilder2],githubLink:"https://github.com/JC33340/CVbuilder2",technologiesUsed:["react","typescript","HTML","CSS",'tailwind'], Link:'https://cvbuilder2-q33qjdty3-jc33340s-projects.vercel.app/'},
+        {name:"PR tracker",description:"Enter and keep track of PR progress in the gym",pictures:[PRtracker1,PRtracker2],githubLink:"https://github.com/code50/137620817/tree/ec2e1756914286afef16542258eeb663cd85a442/final_project",technologiesUsed:["flask","HTML","CSS","javascript"]},
+        {name:"E-mail Replica",description:"A single page replica of an Email application",pictures:[mail1,mail2],githubLink:"https://github.com/JC33340/mail.git",technologiesUsed:["django","HTML","CSS","SQLite"]},
+        {name:"Chat-App", description:"Websocket chat app",pictures:[chatapp1,chatapp2,chatapp3],githubLink:"https://github.com/JC33340/chat.git",technologiesUsed:["django","websocket","HTML","CSS"]},
     ] 
 
     const display: JSX.Element[] = projectInfo.map((item,i)=>{

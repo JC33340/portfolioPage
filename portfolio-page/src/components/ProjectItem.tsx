@@ -8,7 +8,6 @@ interface props{
         name:string,
         description:string,
         pictures:string[], 
-        youtubeLink:string|undefined,
         githubLink:string,
         technologiesUsed:string[],
         Link?:string
@@ -88,7 +87,6 @@ export default function ProjectItem({data,id}:props){
                 </div>
             </div>
             <div className="anchor-container">
-                {data.youtubeLink && <div className="anchor-div"><LogoYoutube /> <a target = "_blank" className="project-item-a" href={data.youtubeLink}>Demo</a></div> }
                 <div className="anchor-div"><LogoGithub /><a style={{marginLeft:"3px"}} target="_blank" className="project-item-a" href={data.githubLink}>Repo</a></div>
                 {data.Link ? <div className="anchor-div"><LogoLink /><a style={{marginLeft:"3px"}} target="_blank" className="project-item-a" href={data.Link}>Link</a></div>:<></>}
             </div>

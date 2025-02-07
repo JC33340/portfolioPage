@@ -124,12 +124,14 @@ html{
   right:0;
   left:0;
   z-index: 10;
-  background-color: #61758E;
-  visibility: hidden;
+  opacity:0;
+  transition: 0.2s ease-in-out;
+
 }
 
 .background-gray{
-  visibility: visible;
+  background-color:#282e38;
+  opacity:1;
 }
 
 .header-name{
@@ -478,6 +480,8 @@ html{
   overflow: hidden;
   width: 600px;
   position: relative;
+  border-radius: 10px;
+
 }
 
 .project-image-slides{
