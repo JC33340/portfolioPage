@@ -1,5 +1,5 @@
 import React from "react";
-import {LogoTailwind, LogoLink,LogoJavascript,LogoReact,LogoCSS,LogoDjango,LogoFlask,LogoGithub,LogoHTML,LogoTypscript,LogoYoutube,LogoWebsocket,LogoSQLite} from "./Logos"
+import {LogoMySQL, LogoNodeJs, LogoTailwind, LogoLink,LogoJavascript,LogoReact,LogoCSS,LogoDjango,LogoFlask,LogoGithub,LogoHTML,LogoTypscript,LogoYoutube,LogoWebsocket,LogoSQLite} from "./Logos"
 import useIntersectionObserver from "../customHooks/useIntersectionObserver";
 import {ArrowLeft, ArrowRight} from "./Logos"
 
@@ -28,6 +28,8 @@ export default function ProjectItem({data,id}:props){
         else if (item === "websocket") return <LogoWebsocket />
         else if (item === "SQLite") return <LogoSQLite />
         else if(item === "tailwind") return <LogoTailwind />
+        else if(item === "nodejs") return <LogoNodeJs />
+        else if(item === "mysql") return <LogoMySQL />
         else return (<></>)     
             
     })

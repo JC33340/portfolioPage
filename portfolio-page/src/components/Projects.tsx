@@ -13,6 +13,9 @@ import minigames1 from "../photos/minigames1.png"
 import minigames2 from "../photos/minigames2.png"
 import minigames3 from "../photos/minigames3.png"
 import minigames4 from "../photos/minigames4.png"
+import budget1 from '../photos/budget1.png'
+import budget2 from '../photos/budget2.png'
+import budget3 from '../photos/budget3.png'
 import useIntersectionObserver from '../customHooks/useIntersectionObserver'
 
 
@@ -26,7 +29,8 @@ export default function Projects(){
         technologiesUsed:string[],
         Link?:string
     }[] =[
-        {name: 'Minigames App', description:"app containing some classic minigames", pictures:[minigames1,minigames2,minigames3,minigames4],githubLink:'https://github.com/JC33340/minigames',technologiesUsed:['HTML','react','typescript','tailwind'],Link:'https://minigames-mu.vercel.app/'},
+        {name: 'Budgeting App', description:"A budgeting application", pictures:[budget1,budget2,budget3],githubLink:'https://github.com/JC33340/budget-frontend',technologiesUsed:['react','typescript','tailwind','nodejs','express','mysql'],Link:'https://budget-frontend-production.up.railway.app'},
+        {name: 'Minigames App', description:"App containing some classic minigames", pictures:[minigames1,minigames2,minigames3,minigames4],githubLink:'https://github.com/JC33340/minigames',technologiesUsed:['HTML','react','typescript','tailwind'],Link:'https://minigames-mu.vercel.app/'},
         {name:"CV-Builder",description:"Converts user input into a downloadable PDF",pictures:[cvBuilder1,cvBuilder2],githubLink:"https://github.com/JC33340/CVbuilder2",technologiesUsed:["react","typescript","HTML","CSS",'tailwind'], Link:'https://cvbuilder2-q33qjdty3-jc33340s-projects.vercel.app/'},
         {name:"PR tracker",description:"Enter and keep track of PR progress in the gym",pictures:[PRtracker1,PRtracker2],githubLink:"https://github.com/code50/137620817/tree/ec2e1756914286afef16542258eeb663cd85a442/final_project",technologiesUsed:["flask","HTML","CSS","javascript"]},
         {name:"E-mail Replica",description:"A single page replica of an Email application",pictures:[mail1,mail2],githubLink:"https://github.com/JC33340/mail.git",technologiesUsed:["django","HTML","CSS","SQLite"]},
